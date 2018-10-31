@@ -1,0 +1,40 @@
+/* ListSubComment css */
+
+span.mouse_on_detail
+{
+	font-size:12px;
+	line-height:16px;
+	color:#FFF;
+	background-color:#000;
+	z-index:2;
+	position:relative;
+	top:60px;
+	padding:2px;
+}
+
+#container #ranking a.tip span.mouse_on_detail,
+#container #undercolumn form .list_area .listphoto a.tip span.mouse_on_detail
+{
+	position:relative;
+	display:block;
+	top:-9999px;
+	width:100px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#container #ranking a:hover span.mouse_on_detail
+{
+	display:block;
+	position:relative;
+	top:100px;
+	text-decoration:none;
+}
+
+#container #undercolumn form .list_area .listphoto a:hover span.mouse_on_detail
+{
+	display:block;
+	position:relative;
+	top:60px;
+	text-decoration:none;
+}

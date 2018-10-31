@@ -1,0 +1,437 @@
+@charset "utf-8";
+
+/* --------------------------------
+	Theme CSS for EC-CUBE 3
+-------------------------------- */
+
+
+/* --------------------------------
+	Common
+-------------------------------- */
+
+body {
+}
+
+.img_center,
+.txt_center {
+	text-align: center;
+}
+.img_right,
+.txt_right {
+	text-align: right;
+}
+
+/****** Base Layout Setting ********/
+
+/*#header {
+	background: #D93600;
+}
+#contents {
+	background: #fff;
+}
+*/
+/****** Header Setting ********/
+
+
+/****** Side Setting ********/
+
+/****** Footer Setting ********/
+
+/****** Effect Setting ********/
+
+
+/****** Each BlockParts Setting ********/
+
+/* cart area */
+
+#cart_area {
+	width: 100%;
+	position: absolute;
+	right: 0; top: 0;
+	z-index: 11;
+}
+#cart_area p {
+	margin: 0;
+}
+#cart_area p.cart-trigger {
+	position: absolute;
+	right: 50px;
+    top:-3px;
+}
+
+#cart .inner {
+	background: #f3f3f3;
+}
+
+
+/* snsbtn_area */
+.snsbtn_area .snsbtn {
+    float: left;
+    height: 20px;
+    margin: 0 10px 10px 0;
+}
+
+/* --------------------------------
+	Top Page
+-------------------------------- */
+
+.front_page #contents .row > div {
+	padding-bottom: 8px;
+}
+.front_page #contents .row.no-padding > div {
+	padding-bottom: 0;
+}
+
+/* Comment Area */
+
+.front_page .comment_area h4 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	margin: 0 0 2px;
+}
+.front_page .comment_area h5 {
+	font-size: 16px;
+	font-size: 1.6rem;
+	margin: 0;
+}
+.front_page .comment_area p {
+	margin: 10px 0 15px;
+}
+
+/* Item List */
+
+.front_page .item_comment {
+	color: #444;
+}
+.front_page .item a {
+	padding-bottom: 0;
+}
+.front_page .item a:hover {
+	opacity: 0.8;
+}
+.front_page .item a:hover img {
+	opacity: 1;
+}
+.front_page #contents_top .item_comment {
+	color: #525263;
+	font-weight: normal;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.front_page .pickup_item{
+    margin-bottom: 3rem;
+}
+
+.front_page #contents_top .pickup_item a{
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.front_page #contents_top .pickup_item a:hover{
+    opacity: .7;
+}
+.front_page #contents_top .item_comment.text-warning,
+.front_page #contents_top .item_name.text-warning {
+	color: #9a947e;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+.front_page .more_link.text-warning {
+	font-weight: bold;
+	color: #9A947E;
+}
+
+/*free area*/
+/* txt_bnr */
+
+
+.txt_bnr {
+	background: #f8f8f8;
+	border: 1px solid #D9D9D9;
+	font-weight: bold;
+	padding: 16px;
+	margin: 12px 0 0;
+	text-align: center;
+}
+.txt_bnr strong {
+	color: #DE5D50;
+	font-size: 20px;
+	font-size: 2rem;
+}
+.txt_bnr strong strong {
+	font-size: 32px;
+	font-size: 3.2rem;
+}
+
+.item_gallery li {
+    margin-bottom: 2rem;
+}
+
+/* --------------------------------
+	Detail Page
+-------------------------------- */
+
+/*#item_detail + row {
+	margin-top: -1px;
+	background: #fff;
+}*/
+
+/*#item_detail .btn_area li:last-child {
+    padding-left: 0;
+}
+*/
+
+
+/* Slider */
+.slick-loading .slick-list {
+    background: #fff url('ajax-loader.gif') center center no-repeat;
+}
+
+
+/* Arrow */
+
+.slick_prev,
+.slick_next {
+	font-size: 18px;
+	font-size: 1.8rem;
+	width: 40px; height: 40px;
+	line-height: 40px;
+}
+
+/* Dots */
+.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: relative;
+    bottom: -45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+.slick-dots li button:before {
+	content:" ";
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    opacity: .25;
+    background-color: black;
+	border-radius: 50%;
+
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    background-color: black;
+}
+
+.slick-dots li button.thumbnail img {
+	width: 0; height: 0;
+}
+
+#item_photo_area .slick-slide {
+	text-align: center;
+}
+#item_photo_area .slick-slide img {
+	display: inline-block;
+}
+
+
+/******************************
+	Media Query
+*******************************/
+
+@media only screen and (max-width: 767px) {
+
+	/* --------- common ---------- */
+
+
+	/****** Header Setting ********/
+
+
+	/****** Side Setting ********/
+
+
+	/****** Effect Setting ********/
+
+
+}
+@media only screen and (min-width: 768px) {
+
+	/* --------- common ---------- */
+
+
+	/****** Header Setting ********/
+
+	/****** Layout ********/
+
+	/* header */
+
+
+	/****** Side Setting ********/
+
+	/****** Footer Setting ********/
+
+	/****** Each BlockParts Setting ********/
+
+	/* search area */
+
+	/* cart */
+
+	#cart .inner {
+		position: absolute;
+		right: 0; top: 0;
+	}
+	#cart_area {
+        /*header cart icon position*/
+		top: 5px; right: 160px;
+        width: 100%;
+	}
+	#cart_area p.cart-trigger {
+		position: relative;
+        top:-1;
+		right: 16px;
+	}
+	#cart_area .inner {
+		min-width: 256px;
+        /*left: 300px;*/
+        left: -100px;
+	}
+	#cart_area .cart_price {
+		font-size: 12px;
+	}
+	#cart_area .cart_price .price {
+		font-size: 16px;
+	}
+
+
+	/* --------------------------------
+		Top Page
+	-------------------------------- */
+
+	/* Comment Area */
+
+/*	.front_page .comment_area h4 {
+		font-size: 32px;
+		font-size: 3.2rem;
+		margin: 0 0 8px;
+	}
+	.front_page .comment_area h5 {
+		font-size: 20px;
+		font-size: 2rem;
+	}
+	.front_page .comment_area p {
+		font-size: 20px;
+		font-size: 2rem;
+		margin: 24px 0 24px;
+	}
+*/
+    /*free area*/
+	/* txt_bnr */
+	.txt_bnr_area {
+		padding-left: 16px;
+	}
+
+	.txt_bnr {
+		margin:0 0 16px;
+	}
+
+	/* --------------------------------
+		Detail Page
+	-------------------------------- */
+
+	#item_photo_area .slick-dots {
+		margin: 0 -16px;
+		position: relative;
+		bottom: 0;
+	}
+	#item_photo_area .slick-dots::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	#item_photo_area .slick-dots li {
+		width: 20%; height: auto;
+		padding: .5rem;
+		margin: 0;
+		float: left;
+	}
+
+	.slick-dots li button.thumbnail {
+		width: 100%; height: auto;
+		padding: 0;
+	}
+	.slick-dots li button.thumbnail img {
+		width: 100%; height: auto;
+		opacity: 0.8;
+	}
+	.slick-dots li button.thumbnail:hover img,
+	.slick-dots li.slick-active button.thumbnail img {
+		opacity: 1;
+	}
+	.slick-dots li button.thumbnail::before {
+		display: none;
+	}
+}
+
+/* --------------------------------
+    display mask
+-------------------------------- */
+.prevention-masked {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3040;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.extra-form {
+  margin: 10px 0;
+}

@@ -1,0 +1,55 @@
+# for travis-ci
+# see also. https://travis-ci.org
+language: php
+
+php:
+    - 5.6
+    - 5.5
+    - 5.4
+      #- 5.3
+
+env:
+    global:
+        - DBNAME=myapp_test HTTP_URL=http://localhost:8000 HTTPS_URL=https://localhost:8000
+    matrix:
+        - VER=eccube-2.13.3 DB=mysql USER=root DBPASS=' ' DBUSER=root
+        - VER=eccube-2.13.3 DB=pgsql USER=postgres DBPASS=password DBUSER=postgres
+        - VER=eccube-2.13.2 DB=mysql USER=root DBPASS=' ' DBUSER=root
+        - VER=eccube-2.13.2 DB=pgsql USER=postgres DBPASS=password DBUSER=postgres
+        - VER=eccube-2.12.6 DB=mysql USER=root DBPASS=' ' DBUSER=root
+        - VER=eccube-2.12.6 DB=pgsql USER=postgres DBPASS=password DBUSER=postgres
+        #- VER=eccube-2.12.6en-p1 DB=mysql USER=root DBPASS=' ' DBUSER=root
+        #- VER=eccube-2.12.6en-p1 DB=pgsql USER=postgres DBPASS=password DBUSER=postgres
+
+before_script:
+    - mkdir -p .BreadcrumbList
+    - mv * .BreadcrumbList
+    - mv .BreadcrumbList BreadcrumbList
+    - curl -s -f -L https://github.com/nobuhiko/EC-CUBE/archive/${VER}.tar.gz | tar xvz -C ./
+    - mv EC-CUBE-${VER} ec-cube
+    - git clone --depth=1 https://github.com/nobuhiko/ec-cube-plugin-install-script ec-cube/ec-cube-plugin-install-script
+    - mkdir -p ec-cube/data/downloads/plugin/BreadcrumbList
+    - mv BreadcrumbList ec-cube/data/downloads/plugin
+    - cd ec-cube
+    - curl -s -f -L https://raw.githubusercontent.com/nobuhiko/EC-CUBE/develop/eccube_install.sh -O
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+    - php -S localhost:8000 -t html/ &
+    - sh -c "if [ '$DB' = 'mysql' ]; then sh ./eccube_install.sh mysql; fi"
+    - sh -c "if [ '$DB' = 'pgsql' ]; then sh ./eccube_install.sh pgsql; fi"
+    - cd ec-cube-plugin-install-script
+    - php plugin_install.php -e
+    - cd ../data/downloads/plugin/BreadcrumbList/
+    - sh -c "if [ '$DB' = 'mysql' ]; then mysql myapp_test < tests/_data/dump.sql; fi"
+    - sh -c "if [ '$DB' = 'pgsql' ]; then psql myapp_test < tests/_data/dump.sql -U postgres; fi"
+    - curl -s http://getcomposer.org/installer | php
+    - php composer.phar install --dev --no-interaction
+    - '[[ "$TRAVIS_PHP_VERSION" == "5.3" ]] || php vendor/bin/codecept build'
+
+script:
+    #- mkdir -p reports/coverage
+    #- phpunit -c phpunit.xml.dist
+    - '[[ "$TRAVIS_PHP_VERSION" == "5.3" ]] || php vendor/bin/codecept run --env travis --steps'
+
+after_script:
+    #- php vendor/bin/coveralls -v

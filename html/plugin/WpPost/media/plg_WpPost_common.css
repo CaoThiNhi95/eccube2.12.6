@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+/* 
+ * WpPost PC 共通CSS
+ *
+ */
+
+/* 
+ * WpPost パンクズ
+ *
+ */
+.breadcrumbs {
+	/*height:2em;*/
+}
+.breadcrumbs li{
+	float: left;
+	line-height: 2em;
+	padding-left: 0.75em;
+}
+.breadcrumbs li a {
+	display: block;
+	background: url(topicpath.gif) no-repeat right center;
+	padding-right: 15px;
+}
+
+/* 
+ *WpPost メニュー
+ * 
+ */
+#wppost_postlist {
+	border: 1px solid #CCC;
+    border-top: 1px solid #f90;
+}
+#wppost_postlist .title {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0;
+	padding: 0.7em 0;
+	background: url("bg_btn_list.jpg") bottom repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#E6E6E6));
+}
+#wppost_postlist .contents {
+ 	padding: 5px 5px 5px 12px;
+    border-top: 1px solid #CCC;
+    /*border-top: none;*/
+}
+#wppost_postlist .contents li {
+	line-height: 160%;
+	list-style-position: inside;
+    list-style-image: url(plg_WpPost_head.jpg);
+}
+
+/* 
+ * WpPost 記事ページ
+ */
+ h3.comment_title {
+	font-size: 1.4em;
+	margin-top: 20px;
+	padding: 10px;
+	border: solid 1px #CCC;
+	background: -moz-linear-gradient(top, #FFF, #E6E6E6); /* Firefox用 */  
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#E6E6E6));
+}
+#wppost #wppost_content {
+    padding: 0 15px;
+}
+#wppost #wppost_content .date {
+    text-align: right;
+    font-size: 0.8em;
+}
+#wppost #wppost_content .post_cats {
+    font-size: 0.9em;
+    text-align: right;
+    margin: 0.5em 0 0;
+}
+#wppost #wppost_content .products {
+    margin:2em 0 0;
+    /*border: solid 1px #ccc;*/
+}
+/* 
+ * WpPost 記事ページコメント
+ */
+	/*margin-top: 10px;*/
+h3.comment_title .comment_count {
+	font-size: 0.6em;
+	text-align: right;
+	font-weight: normal;
+	float: right;
+}
+.comment_login {
+	margin: 10px 0 0 0;
+	padding: 5px;
+	background: #FFC;
+}
+.comment_count {
+	/*margin-top: 10px;*/
+	font-size: 0.8em;
+	text-align: right;
+}
+#wppost .depth-1 {
+	margin-top: 20px;
+	background: #DDD;
+	padding: 0 15px 15px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px; 
+	border-radius: 10px;
+}
+#wppost .comment-body {
+	padding-top: 15px;
+}
+#wppost .comment-content {
+	clear: both;
+	padding-top: 10px;
+}
+#wppost .comment-content p {
+	/*margin-top: 10px;*/
+	padding: 10px;
+	background: #FFF;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+#wppost .comment-meta {
+	/*position: relative;
+	background: #FF0;
+	display: block;*/
+}
+#wppost .comment-author {
+	float: left;
+	font-weight: bold;
+}
+#wppost .comment-author img {
+	vertical-align: center;
+}
+#wppost span.says {
+	display: none;
+}
+#wppost .comment-metadata {
+	float: right;
+	font-size: 0.8em;
+}
+#wppost .comment-metadata a {
+	vertical-align: middle;
+}
+#wppost .reply {
+	margin-top: 5px;
+	text-align: right;
+	font-size: 0.8em;
+}
+#wppost .children {
+	padding: 0 0 0 15px;
+	border-left: solid 1px #AAA;
+}
+#wppost .pchange {
+	margin: 1em;
+}
+#wppost .pchange .com_before {
+	float: left;
+}
+#wppost .pchange .com_new {
+	float: right;
+}
+#comment_reply {
+	margin: 15px 0 0;
+	padding: 15px;
+	background: #FFF;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px; 
+	border-radius: 10px;
+}
+h3#reply-title {
+	float: left;
+	font-size: 1.2em;
+}
+.comment_cancel {
+	float: right;
+}
+form#commentform {
+	clear: both;
+}
+#comment_reply p.form-submit {
+	text-align: center;
+}
+#page_comment {
+	margin-top: 20px;
+	padding: 15px;
+	background: #DEF0F8;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px; 
+	border-radius: 10px;
+	border: solid 1px #CCC;
+}
+#page_comment p.form-submit {
+	text-align: center;
+}
+.wp_comment_bloc {
+	/*border: solid 2px #F00;*/
+}
+.comment_login form {
+	display: inline;
+}
+
+/* 
+ * WpPost カテゴリページ
+ */
+#wpcategory #wpcategory_content {
+    padding: 15px;
+}
+#wpcategory #wpcategory_content .cat-item {
+	margin: 10px 0 0;
+	list-style: none;
+}
+#wpcategory #wpcategory_content .cat_posts {
+	margin: 10px 0 10px 10px;
+}
+#wpcategory #wpcategory_content .parent {
+	/*margin: 10px 0 0;*/
+}
+#wpcategory #wpcategory_content .children {
+    margin: 10px 0 10px 15px;
+}
+#wpcategory #wpcategory_content .post_block {
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    /*border-top: dotted 1px #DDD;*/
+	border-bottom: dotted 1px #DDD;
+}
+#wpcategory #wpcategory_content .post_title {
+    font-size: 1.2em;
+    background-image: url("plg_WpPost_head.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding:0 0 0 1em;
+}
+#wpcategory #wpcategory_content .post_summary {
+    font-size: 1em;
+    margin:0 0 0 2em;
+}
+#wpcategory #wpcategory_content .post_cats {
+    font-size: 0.9em;
+    text-align: right;
+    margin:0 0 0 3em;
+}
+#wpcategory #wpcategory_content .post_date {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+/* 
+ * WpPost カテゴリページ 商品表示
+ */
+#wpcategory #wpcategory_content .products_box {
+    width: 100%;
+    padding: 0 0 0 1em;
+    margin: 1em 0 0 0;
+}
+#wpcategory #wpcategory_content .products_box .list_area {
+	width: 100%;
+	/*height: 130px;*/
+    padding: 0 0 15px;
+    margin: 0;
+    /*float: left;*/
+}
+#wpcategory #wpcategory_content .products_box .listphoto {
+	padding: 0;
+	/*width: 30%;
+	height: 120px;
+	overflow: hidden;*/
+	float: left;
+}
+#wpcategory #wpcategory_content .products_box .listphoto img {
+	/*width: 100%;
+	height: auto;*/
+}
+#wpcategory #wpcategory_content .products_box .listrightbloc {
+	/*font-size: 0.9em;*/
+	padding: 0 0 0 2%;
+	width: 50%;
+	float: left;
+}
+#wpcategory #wpcategory_content .products_box .listrightbloc h3 {
+	/*font-size: 0.9em;*/
+}
+#wpcategory #wpcategory_content .products_box .listrightbloc .price {
+	color: #F00;
+}
+#wpcategory #wpcategory_content .products_box .listrightbloc .listcomment {
+	margin: 0 0 5px 0;
+}
+
+
+#wpcategory #wpcategory_content .subcategory {
+    font-size: 1.2em;
+    padding: 10px 0 10px 10px;
+    /*margin: 15px 0 5px 1.5em;
+    border-top: double 1px #DDD;
+    border-bottom: double 1px #DDD;*/
+    background: #EEE;
+    -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px; 
+	border-radius: 10px;
+}
+#wpcategory #wpcategory_content #subpost {
+    margin: 0 0 0 3em;
+}
